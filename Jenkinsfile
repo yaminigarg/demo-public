@@ -13,6 +13,7 @@ pipeline {
         sh 'npm --version'   
       }
     }
+    /*
     stage('Build Docker Image') {
       steps {
         container('docker') {  
@@ -21,5 +22,6 @@ pipeline {
         }
       }
     }
+    */
   }
 }
