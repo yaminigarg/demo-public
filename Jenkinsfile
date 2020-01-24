@@ -1,5 +1,5 @@
 podTemplate(containers: [
-containerTemplate(name: 'docker', image: 'ninech/jnlp-slave-with-dockere', ttyEnabled: true, command: 'cat')
+containerTemplate(name: 'docker', image: 'ninech/jnlp-slave-with-docker', ttyEnabled: true, command: 'cat')
 ]) {
 
 node(POD_LABEL) {
