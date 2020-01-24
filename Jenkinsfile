@@ -2,7 +2,7 @@ podTemplate(containers: [
 containerTemplate(name: 'docker', image: 'ninech/jnlp-slave-with-dockere', ttyEnabled: true, command: 'cat')
 ]) {
 
-node('docker_agent') {
+node(POD_LABEL) {
 stage('Build a Dockerfile') {
 git 'https://github.com/yaminigarg/demo-public'
 container('docker') {
