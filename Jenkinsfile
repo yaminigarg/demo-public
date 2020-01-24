@@ -6,9 +6,9 @@ node('docker_agent') {
 stage('Build a Dockerfile') {
 git 'https://github.com/yaminigarg/demo-public'
 container('docker') {
-sh '
+sh '''
 cd EmployeeDB
-docker build -t demo-app-new .'
+docker build -t demo-app-new .'''
 }
 }
 }
