@@ -4,7 +4,7 @@ containerTemplate(name: 'docker', image: 'ninech/jnlp-slave-with-docker', ttyEna
 
 node(POD_LABEL) {
 stage('Build a Dockerfile') {
-git 'https://github.com/yaminigarg/demo-public.git'
+git 'https://github.com/jenkinsci/kubernetes-plugin.git'
 container('docker') {
 sh """
 cd EmployeeDB
