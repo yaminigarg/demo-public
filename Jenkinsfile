@@ -4,11 +4,12 @@ containerTemplate(name: 'docker', image: 'ninech/jnlp-slave-with-docker', ttyEna
 
 node(POD_LABEL) {
 stage('Build a Dockerfile') {
-git 'https://github.com/yaminigarg/demo-public'
+git 'https://github.com/yaminigarg/demo-public.git'
 container('docker') {
-sh '''
+sh """
 cd EmployeeDB
-docker build -t demo-app-new .'''
+docker build -t demo-app-new .
+"""
 }
 }
 }
