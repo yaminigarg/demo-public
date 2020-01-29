@@ -18,7 +18,13 @@ pipeline {
     stage('Build Docker Image') {
       steps {
         container('jenkinsagent') {
-          sh 'git clone https://github.com/yaminigarg/demo-public.git'
+          sh ''''
+          apt update
+          apt install git
+          git clone https://github.com/yaminigarg/demo-public.git
+          cd demo-public/EmployeeDB
+          docker build .
+            '''
         }
       }
     }
