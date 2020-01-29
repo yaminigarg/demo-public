@@ -18,14 +18,7 @@ pipeline {
     stage('Build Docker Image') {
       steps {
         container('jenkinsagent') {
-          sh """
-            apt update
-            apt install git
-            git clone https://github.com/yaminigarg/demo-public.git
-            cd demo-public/EmployeeDB
-            docker build .
-             """  // when we run docker in this step, we're running it via a shell on the docker build-pod container, 
-       // which is just connecting to the host docker deaemon
+          sh 'git clone https://github.com/yaminigarg/demo-public.git'
         }
       }
     }
