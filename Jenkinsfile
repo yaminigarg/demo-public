@@ -17,7 +17,7 @@ pipeline {
     */
     stage('Build Docker Image') {
       steps {
-        container('docker') {
+        container('jenkinsagent') {
           sh """
             apt update
             apt install git
