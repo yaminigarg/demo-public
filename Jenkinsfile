@@ -18,7 +18,7 @@ pipeline {
     stage('Build Docker Image') {
       steps {
         container('jenkinsagent') {
-          sh ''''
+          sh '''
           apt update
           apt install git
           git clone https://github.com/yaminigarg/demo-public.git
