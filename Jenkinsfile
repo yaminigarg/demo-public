@@ -19,11 +19,10 @@ pipeline {
       steps {
         container('jenkinsagent') {
           sh '''
+          mkdir -p abc
           apt update
           apt install git
           git clone https://github.com/yaminigarg/demo-public.git
-          cd demo-public/EmployeeDB
-          docker build .
             '''
         }
       }
