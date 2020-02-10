@@ -4,7 +4,8 @@ RUN mkdir -p /app/server
 
 COPY . /app/server
 
-RUN cd /app/server && npm install 
+RUN cd /app/server
+RUN npm install 
 
 WORKDIR /app/server
 
